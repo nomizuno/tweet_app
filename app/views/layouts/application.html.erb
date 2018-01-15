@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html>
+<head>
+	<title>Poemy</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+	<!-- /jQueryを読み込む -->
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+
+
+
+   
+  </head>
+
+<header>
+  <div class="header-logo">
+    <%= link_to("Poemy","/") %>
+  </div>
+  
+  <ul class="header-menus">
+    <li>
+      <%= link_to("Poemyとは","/about") %>
+    </li>
+    <li>
+      <%= link_to("投稿一覧","/posts/index") %>
+    </li>
+    <li>
+      <%= link_to("新規投稿","/posts/new") %>
+    </li>
+  </ul>
+
+</header>
+
+
+<body>
+
+  <%= yield %>
+
+
+</body>
+</html>
