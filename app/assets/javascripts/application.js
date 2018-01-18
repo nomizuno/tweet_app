@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$(document).ready(function(){$(".about-main").hover(
+$(document).ready(function(){$(".about-main h2").hover(
     function(){
   $("p").fadeIn();
 },
