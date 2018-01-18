@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+
 <html>
 <head>
 	<title>Poemy</title>
@@ -13,31 +13,37 @@
 
    
   </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <%= link_to("Poemy","/") %>
+      </div>
 
-<header>
-  <div class="header-logo">
-    <%= link_to("Poemy","/") %>
-  </div>
-  
-  <ul class="header-menus">
-    <li>
-      <%= link_to("Poemyとは","/about") %>
-    </li>
-    <li>
-      <%= link_to("投稿一覧","/posts/index") %>
-    </li>
-    <li>
-      <%= link_to("新規投稿","/posts/new") %>
-    </li>
-  </ul>
+      <ul class="header-menus">
+        <li>
+          <%= link_to("Poemyとは","/about") %>
+        </li>
+        <li>
+          <%= link_to("投稿一覧","/posts/index") %>
+        </li>
+        <li>
+          <%= link_to("新規投稿","/posts/new") %>
+        </li>
+      </ul>
 
-</header>
-
-
-<body>
-
-  <%= yield %>
+    </header>
 
 
-</body>
-</html>
+
+
+    <% if flash[:notice] %>
+    <div class ="flash">
+      <%= flash[:notice] %>
+    </div>
+    <% end %>
+
+    <%= yield %>
+
+
+  </body>
+  </html>
