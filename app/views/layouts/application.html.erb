@@ -4,15 +4,14 @@
 <head>
 	<title>Poemy</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-
+  
 	<!-- /jQueryを読み込む -->
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
-
-
-
-   
+ 
   </head>
+
+  
   <body>
     <header>
       <div class="header-logo">
@@ -21,6 +20,9 @@
 
       <ul class="header-menus">
         <li>
+          <%= link_to("新規登録","/users/signup") %>
+        </li>
+        <li>
           <%= link_to("Poemyとは","/about") %>
         </li>
         <li>
@@ -28,6 +30,9 @@
         </li>
         <li>
           <%= link_to("新規投稿","/posts/new") %>
+        </li>
+        <li>
+          <%= link_to("poemer List","/users/index") %>
         </li>
       </ul>
 
