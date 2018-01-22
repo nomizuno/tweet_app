@@ -135,12 +135,17 @@ header{
 .flash {
   padding: 10px 0;
   color: white;
-  background:orange;
+  background:rgba(222,34,4,0.3);
+
   text-align: center;
   position: absolute;
-  top: 64px;
+  top: 72px;
   z-index:10;
   width: 100%;
   border-radius:0 0 2px 2px;
   font-size: 14px;
 }
+
+
+
+
