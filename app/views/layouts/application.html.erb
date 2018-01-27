@@ -23,6 +23,8 @@
           <%= link_to("新規登録","/users/signup") %>
         </li>
         <li>
+          <%= link_to("ログイン","/login") %>
+        <li>
           <%= link_to("Poemyとは","/about") %>
         </li>
         <li>
@@ -33,6 +35,15 @@
         </li>
         <li>
           <%= link_to("poemer List","/users/index") %>
+        </li>
+        <li>
+          <%= link_to("ログアウト","/logout",{method: :post}) %>
+        </li>
+        <li>
+         <% @user = User.find_by(id: session[:user_id]) %>
+         <% if @user %>
+         <%= @user.name %>
+         <% end %>
         </li>
       </ul>
 

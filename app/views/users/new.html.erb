@@ -5,7 +5,7 @@
 		<div class="form users-form">
 			<div class="form-body">
 
-				<div class="error_message">
+				<div class="form_error">
 					<% @user.errors.full_messages.each do |message| %>
 					<%= message %>
 					<% end %>
@@ -16,7 +16,8 @@
 				<input name ="name" value="<%= @user.name %>">
 				<p>メールアドレス</p>
 				<input name ="email" value="<%= @user.email %>">
-
+				<p>パスワード</p>
+				<input name ="password"  type ="password" value="<%= @user.password %>">
 				<input type ="submit" value="登録">
 				<% end %>
 			</div>
