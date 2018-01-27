@@ -5,7 +5,8 @@ class PostsController < ApplicationController
   end
   
   def create
-  	@post=Post.new(content: params[:content])
+  	@post=Post.new(content: params[:content],
+                    user_id: @current_user.id)
     @post.save
   if @post.save
       #保存できた場合
@@ -49,6 +50,7 @@ class PostsController < ApplicationController
 
    def show
      @post = Post.find_by(id: params[:id])
+     @user = User.find_by(id: @post.user_id)
    end
 
  end
