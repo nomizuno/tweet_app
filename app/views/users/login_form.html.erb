@@ -11,9 +11,9 @@
       <% end %>
 				<%= form_tag("/login") do %>
 				<p>E-mail</p>
-				<input name = "email">
+				<input name = "email" value = "<%= @email %>">
 				<p>password</p>
-				<input type ="password" name = "password">
+				<input type ="password" name = "password" value = "<%= @password %>">
 				<input type ="submit" value="ログイン">
 				<% end %>
 
