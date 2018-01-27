@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   post "users/:id/update" => "users#update"
   get "users/:id" => "users#show"
 
+  get "login" => "users#login_form"
+  post "login" => "users#login"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
