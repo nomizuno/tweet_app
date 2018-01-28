@@ -13,6 +13,26 @@
 				<% end %>
 			</div>
 		</div>
+
+		<% @user.posts.each do |post| %>
+		<div class="posts-index-item">
+			
+			<div class = "user-left" >
+				<img src= "<%= "/user_images/#{@user.image_name}" %>" >
+			</div>
+			
+			<div class ="user-right" >
+				<div class ="post-user-name">
+				<%= link_to(@user.name,"/users/#{@user.id}") %>
+			 </div>
+				<%= link_to(post.content,"/posts/#{post.id}") %>
+			</div>
+
+
+		</div>
+		<% end %>
+
+
 	</div>
 </div>
 
