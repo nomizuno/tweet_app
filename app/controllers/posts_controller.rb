@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-
+  
+  before_action  :ensure_correct_user, {only: [:edit, :update, :destroy]}
 
   def new
     @post = Post.new
@@ -54,7 +55,13 @@ class PostsController < ApplicationController
      @user = @post.user
    end
 
-
+   def ensure_correct_user
+    @post = Post.find_by(id: params[:id])
+    if @post.user_id != @current_user.id
+      flash[:notice] = "権限がありません"
+      redirect_to("/posts/index")
+    end
+   end
 
  end
 
