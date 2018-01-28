@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 
+
   def new
     @post = Post.new
   end
@@ -52,6 +53,7 @@ class PostsController < ApplicationController
      @post = Post.find_by(id: params[:id])
      @user = @post.user
    end
+
 
 
  end

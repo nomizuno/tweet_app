@@ -4,6 +4,7 @@ class Post < ActiveRecord::Base
 
 
    def user
+    
     return User.find_by(id: self.user_id)
   end
 
