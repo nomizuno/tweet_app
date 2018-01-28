@@ -1,9 +1,22 @@
 <div class ="main posts-index">
 	<div class="container">
-	  <h1 class ="form-heading">poem List</h1>
+		<h1 class ="form-heading">poem List</h1>
 		<% @posts.each do |post| %>
+		<% @user = post.user %>
 		<div class="posts-index-item">
-			<%= link_to(post.content,"/posts/#{post.id}") %>
+			
+			<div class = "user-left" >
+				<img src= "<%= "/user_images/#{@user.image_name}" %>" >
+			</div>
+			
+			<div class ="user-right" >
+				<div class ="post-user-name">
+				<%= link_to(@user.name,"/users/#{@user.id}") %>
+			 </div>
+				<%= link_to(post.content,"/posts/#{post.id}") %>
+			</div>
+
+
 		</div>
 		<% end %>
 	</div>
