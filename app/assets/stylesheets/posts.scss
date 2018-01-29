@@ -169,3 +169,18 @@
 .user {
 	margin-bottom:20px;
 }
+
+.active {
+  border-bottom: solid 2px orange;
+}
+
+.user-tabs{
+  margin-bottom: 10px;
+  display:table;
+}
+
+.user-tabs li {
+  padding:3px 10px;
+  display:table-cell;
+}
+
