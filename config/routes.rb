@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   post "likes/:post_id/create" => "likes#create"
   post "likes/:post_id/destroy" => "likes#destroy"
 
+  get "users/:id/likes" => "users#likes"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
