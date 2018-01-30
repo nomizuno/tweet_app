@@ -29261,3 +29261,5 @@ Migrating to CreateLikes (20180128134415)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180128134415"]]
   [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from require at /Users/mizunoyuuma/.rbenv/versions/2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from require at /Users/mizunoyuuma/.rbenv/versions/2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55)
