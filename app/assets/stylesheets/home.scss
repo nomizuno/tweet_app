@@ -90,11 +90,27 @@ header{
 /* top ================================ */
 .top-main{
 	padding:100px 0 100px;
-	 text-align: center;
+	text-align: center;
+  background-color:white;
+}
+.top-message{
+  position: relative;
+  z-index:1;
+}
+.background{
+  height: 500px;
+  width: 100%;
+  position: absolute;
+  top:431px;
+  background-color: black;
+  
 }
 .top-message h2{
   font-size:40px;
   font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック"; font-weight: bold;
+}
+.top-message span{
+  color: white;
 }
 .top-message img{
   padding:10px 0px;
