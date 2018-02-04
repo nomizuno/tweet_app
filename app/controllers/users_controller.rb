@@ -41,10 +41,9 @@ end
   def show
   	@user = User.find_by(id: params[:id])
     @posts = Post.where(user_id: @user.id)
-
+    @likes = Like.where(post_user_id: @user.id)
+    
    
-     @likes = Like.find_by(user_id: @user.id)
-
 
   end
 
